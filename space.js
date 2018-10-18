@@ -1,3 +1,33 @@
+$( ".column1" ).click(function() {
+  $( ".sabers" ).fadeOut( 2000, "linear", function() {
+  });
+});
+
+$( ".column1" ).click(function() {
+  $( ".lightSaber" ).delay(2000).fadeIn( 1000, "linear", function() {
+  });
+});
+
+var firstApp = angular.module('spaceApp', []);
+firstApp.controller('myController', function($scope) {
+    $scope.theImage = "imgs/jedi.jpg";
+    $scope.isJedi = false;
+    $scope.isSith = true;
+    $scope.makeJedi = function() {
+        $scope.isJedi = true;
+        console.log($scope.isJedi);
+        $scope.theImage = "imgs/jedi.jpg";
+    };
+    $scope.makeSith = function() {
+        $scope.isSith = true;
+        console.log($scope.isSith);
+        $scope.theImage = "imgs/sith.jpg";
+    };
+    $scope.displaySaber = function() {
+        
+    }
+});
+
 var canvas = document.getElementById('space_box');
 
         var c = canvas.getContext('2d');
