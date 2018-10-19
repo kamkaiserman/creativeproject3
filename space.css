@@ -1,4 +1,5 @@
 body {
+    cursor: url(lightsabertiny.png), pointer;
     margin: 0;
     transition: all linear 0.5s;
 }
@@ -10,29 +11,25 @@ table {
 }
 
 .lightSaber {
-    position: absolute;
-    top: 10vh;
     display:none;
-     color: red;   
+    position: absolute;
+    margin: 15% 0% 0% 35%;
+    opacity: 0.4;
 }
 
-
-h1 {
-    font-family: 'Poller One', cursive;
-    font-size: 20px;
+.container {
+    position: absolute;
+    padding: 0% 33vw;
 }
 
 p {
-    font-family: 'Raleway', sans-serif;
-
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .logo {
     position: absolute;
     top: 5vh;
-    margin-left: auto;
-    margin-right: auto;
-    color: #FF8C00;
+    text-align: center;
     z-index: 1;
 }
 
@@ -111,12 +108,13 @@ p {
     font-size: 70px;
     text-align: center;
     position: absolute;
-    top: 30vh;
+    top: 40vh;
     width:70%; 
     margin-left:15%; 
     margin-right:15%;
     color: #FF8C00;
     z-index: 1;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

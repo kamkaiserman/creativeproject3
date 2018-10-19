@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -13,16 +13,20 @@
 </head>
 
 <body ng-app="spaceApp" ng-controller="myController" style="background:#000;">
-    <div class="logo">
-        <img src="starWarsLogo.png" alt="STAR WARS" style="width:25%;height:25%;margin: auto;">
+    
+    <div class="container">
+    <div class="logo" style="background-color:">
+        <img src="starWarsLogo.png" alt="STAR WARS" style="width:30%; padding: 30px;" onclick="location.reload();">
+        <p style="color: white; font-size: 10px; margin: 0px; background-color: #FF8C00; border-radius: 25px; padding: 20px; opacity: 0.4;">You can control the stars by moving your mouse and scrolling in and out</p>
+    </div>
     </div>
     <div ng-app="ngAnimate">
         <div class="sabers">
             <table>
                 <tbody class="tableBody2">
                     <tr ng-model="myCheck">
-                        <td class="column1" ng-click="makeJedi()"><img src="imgs/rebel-symbol.png" class="image" style="border: 5px solid white;"></td>
-                        <td class="column1" ng-click="makeSith()"><img src="imgs/imperialseal.png" class="image2" style="border: 5px solid white;"></td>
+                        <td class="column1" ng-click="makeJedi()" onclick="yodaQuote.play();"><img src="imgs/rebel-symbol.png" class="image" style="border: 5px solid green; box-shadow: 0px 0px 20px green;"></td>
+                        <td class="column1" ng-click="makeSith()" onclick="vaderQuote.play();"><img src="imgs/imperialseal.png" class="image2" style="border: 5px solid red; box-shadow: 0px 0px 20px red;"></td>
                     </tr>
                     <tr class="row">
                         <td class="column" style="padding-top: 15px;">Jedi</td>
@@ -33,7 +37,7 @@
         </div>
     </div>
     
-    <div class="lightSaber"><img src={{theImage}}></div>
+    <div class="lightSaber" onmouseover="jediSaber.play();"><img src={{theImage}}></div>
 
     <canvas id="space_box"></canvas>
 
