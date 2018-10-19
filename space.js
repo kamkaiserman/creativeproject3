@@ -1,3 +1,14 @@
+var jediSaber = new Audio('lightsaberOn.wav'); 
+jediSaber.play();
+
+
+var yodaQuote = new Audio('yodaQuote.wav'); 
+yodaQuote.play();
+
+
+var vaderQuote = new Audio('vaderQuote.wav'); 
+vaderQuote.play();
+
 $( ".column1" ).click(function() {
   $( ".sabers" ).fadeOut( 2000, "linear", function() {
   });
@@ -8,20 +19,22 @@ $( ".column1" ).click(function() {
   });
 });
 
+
+
 var firstApp = angular.module('spaceApp', []);
 firstApp.controller('myController', function($scope) {
-    $scope.theImage = "imgs/jedi.jpg";
+    $scope.theImage = "imgs/yoda.gif";
     $scope.isJedi = false;
     $scope.isSith = true;
     $scope.makeJedi = function() {
         $scope.isJedi = true;
         console.log($scope.isJedi);
-        $scope.theImage = "imgs/jedi.jpg";
+        $scope.theImage = "imgs/yoda.gif";
     };
     $scope.makeSith = function() {
         $scope.isSith = true;
         console.log($scope.isSith);
-        $scope.theImage = "imgs/sith.jpg";
+        $scope.theImage = "imgs/vader.gif";
     };
     $scope.displaySaber = function() {
         
@@ -99,7 +112,7 @@ var canvas = document.getElementById('space_box');
             this.y = y;
             this.z = z;
             this.radius = radius;
-            this.color = "#fff";
+            this.color = "white";
             starsIndex++;
             stars[starsIndex] = this;
             this.id = starsIndex;
